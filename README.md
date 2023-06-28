@@ -13,6 +13,8 @@ pip install python-yapi
 
 ## Simple Use
 ```python
-
+from python_yapi import YApi
+yapi = YApi(base_url='http://localhost:3000')
+yapi.login('admin@admin.com', 'ylmf.org')
 
 ```

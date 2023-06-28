@@ -1,9 +1,8 @@
-from python_yapi.base_api import BaseApi
+from python_yapi.base import ApiBase
 
 
-class Group(BaseApi):
+class GroupMixIn(ApiBase):
     def get_group(self, group_id: int=11):
         url = 'api/group/get'
         params = {'id': group_id}
-        res = self.get(url, params=params)
-        return res.json()
+        return self.get(url, params=params)
