@@ -1,6 +1,6 @@
 
 
-from .auth import LoginMixIn
+from .user import LoginMixIn
 from .group import GroupMixIn
 from .project import ProjectMixIn
 from .collection import CollectionMixIn

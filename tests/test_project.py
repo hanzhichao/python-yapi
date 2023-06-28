@@ -7,7 +7,7 @@ class TestProject:
         print(yapi.get_project(project_id=22))
 
     def test_add_project(self, yapi):
-        yapi.add_project(name='测试项目1')
+        print(yapi.add_project(name='测试项目3'))
 
     def test_delete_project(self, yapi):
         yapi.delete_project(project_id=22)
