@@ -15,6 +15,8 @@ pip install python-yapi
 ```python
 from python_yapi import YApi
 yapi = YApi(base_url='http://localhost:3000')
-yapi.login('admin@admin.com', 'ylmf.org')
+yapi.login('admin@admin.com', 'ylme.org')
+
+yapi.create_project(name='Demo Project')
 
 ```
