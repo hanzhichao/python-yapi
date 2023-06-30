@@ -368,3 +368,18 @@ class ProjectMixIn(ApiBase):
         url = '/api/project/token'
         params = {'project_id': project_id}
         return self.get(url, params=params)
+
+    def update_project_wiki(self, project_id: int, desc: str, markdown: str, email_notice: bool = True):
+        """
+        Edit project wiki
+        :param project_id:
+        :param desc: html description
+            eg: "<p>nihao ya</p>\n"
+        :param markdown: markdown description
+            eg: "nihao ya"
+        :return: data or JSON responsebody
+            eg: {"n":1,"nModified":1,"ok":1}
+        """
+        url = '/api/plugin/wiki_desc/up'
+        payload = {"project_id": project_id, "desc": desc, "markdown": markdown, "email_notice": email_notice}
+        return self.post(url, json=payload)
