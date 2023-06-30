@@ -369,6 +369,31 @@ class ProjectMixIn(ApiBase):
         params = {'project_id': project_id}
         return self.get(url, params=params)
 
+    def get_project_wiki(self, project_id: int):
+        """
+        Get project wiki content.
+        :param project_id:
+        :param desc: html description
+            eg: "<p>nihao ya</p>\n"
+        :param markdown: markdown description
+            eg: "nihao ya"
+        :return: data or JSON responsebody
+            eg: {"edit_uid": 15,
+                "_id": 11,
+                "project_id": 55,
+                "desc": "<p>nihao ya****</p>",
+                "markdown": "nihao ya\\*\\*\\*\\*",
+                "username": "zhangsan",
+                "uid": 15,
+                "add_time": 1688129575,
+                "up_time": 1688129736,
+                "__v": 0
+            }
+        """
+        url = '/api/plugin/wiki_desc/get'
+        params = {"project_id": project_id}
+        return self.post(url, params=params)
+
     def update_project_wiki(self, project_id: int, desc: str, markdown: str, email_notice: bool = True):
         """
         Edit project wiki
