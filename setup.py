@@ -5,8 +5,8 @@ import os
 from setuptools import setup, find_packages
 
 this_directory = os.path.abspath(os.path.dirname(__file__))
-setup_requirements = []
-
+setup_requirements = ['requests',
+                      'python-slugify']
 
 def read_file(filename):
     with open(os.path.join(this_directory, filename), encoding='utf-8') as f:

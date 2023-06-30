@@ -9,12 +9,17 @@ def base_url():
 
 
 @pytest.fixture(scope='session')
-def user():
+def admin():
     return 'admin@admin.com', 'ymfe.org'
 
 
 @pytest.fixture(scope='session')
-def yapi(base_url, user):
+def yapi(base_url):
     yapi = YApi(base_url)
-    yapi.login(*user)
+    return yapi
+
+
+@pytest.fixture(scope='session')
+def yapi_admin(yapi, admin):
+    yapi.login(*admin)
     return yapi

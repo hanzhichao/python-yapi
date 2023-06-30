@@ -9,7 +9,7 @@ class GroupMixIn(ApiBase):
 
     def get_my_group(self):
         """
-
+        Get my default group
         :return:
             eg: {
                 "errcode": 0,
@@ -28,6 +28,9 @@ class GroupMixIn(ApiBase):
         """
         url = '/api/group/get_mygroup'
         return self.get(url)
+
+    def get_my_group_id(self)->int:
+        return self.get_my_group()['_id']
 
     def add_group(self, group_name: str, group_desc: str, owner_uids: list[str]):
         """
