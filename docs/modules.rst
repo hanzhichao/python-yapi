@@ -4,4 +4,4 @@ python_yapi
 .. toctree::
    :maxdepth: 4
 
-   python-yapi
+   python_yapi
