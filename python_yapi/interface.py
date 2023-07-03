@@ -1,5 +1,6 @@
+import json
 from enum import Enum
-from typing import List
+from typing import List, Union
 
 from python_yapi.base import ApiBase
 
@@ -62,7 +63,7 @@ class InterfaceMixIn(ApiBase):
         return self.get(url, params=params)
 
     def add_interface(self, title: str, method: str, path: str, project_id: int, catid: int = None,
-                      status: str=None,
+                      status: str = None,
                       tag: list = None,
                       desc: str = None,
                       markdown: str = None,
@@ -72,11 +73,11 @@ class InterfaceMixIn(ApiBase):
                       req_headers: List[dict] = None,
                       req_body_form: List[dict] = None,
                       req_body_type: str = None,
-                      req_body_other: str = None,
+                      req_body_other: Union[dict, str] = None,
 
                       res_body_is_json_schema: bool = None,
                       res_body_type: str = None,
-                      res_body: str = None,
+                      res_body: Union[dict, str] = None,
                       switch_notice: bool = False,
                       api_opened: bool = False):
         """
@@ -138,6 +139,22 @@ class InterfaceMixIn(ApiBase):
             "project_id": project_id,
             "catid": str(catid),
         }
+
+        if isinstance(req_body_other, dict):
+            if req_body_is_json_schema is None:
+                req_body_is_json_schema = True if "schema" in req_body_other else False
+            req_body_other = json.dumps(req_body_other)
+            req_body_type = req_body_type or "json"
+
+        if isinstance(res_body, dict):
+            if res_body_is_json_schema is None:
+                res_body_is_json_schema = True if "schema" in res_body else False
+            res_body = json.dumps(res_body)
+            res_body_type = res_body_type or "json"
+
+        status = 'done' if any([req_params, req_query, req_headers,
+                                req_body_form, req_body_other, res_body]) else 'undone'
+
         for key, value in {'tag': tag, 'desc': desc, 'markdown': markdown,
                            'req_body_is_json_schema': req_body_is_json_schema,
                            'req_params': req_params, 'req_query': req_query, 'req_headers': req_headers,
@@ -145,7 +162,7 @@ class InterfaceMixIn(ApiBase):
                            'req_body_other': req_body_other,
                            'res_body_is_json_schema': res_body_is_json_schema, 'res_body_type': res_body_type,
                            'res_body': res_body, 'switch_notice': switch_notice, 'api_opened': api_opened,
-                'status': status,
+                           'status': status,
                            }.items():
             if value is not None:
                 payload[key] = value

@@ -17,11 +17,10 @@ class TestProject:
         pprint(data)
         # print(yapi_admin.get_project(project_id=33))
 
-    def test_add_project_with_random_name(self, yapi, faker):
-        yapi.login('zhangsan@126.com', 'abc123456')
+    def test_add_project_with_random_name(self, yapi_login, faker):
         # data = yapi.get_my_group()
         # group_id = data['_id']
-        data = yapi.add_project(faker.name())
+        data = yapi_login.add_project(faker.name())
         pprint(data)
 
     def test_get_project_tag(self, yapi):

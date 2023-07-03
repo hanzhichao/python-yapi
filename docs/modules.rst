@@ -1,4 +1,4 @@
-python_yapi
+Api Reference
 ===========
 
 .. toctree::

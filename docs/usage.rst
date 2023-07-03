@@ -29,10 +29,7 @@ To create a GET interface in the project::
                            {"name": "a", "required": "1", "example": "1", "desc": "var a"},
                            {"name": "b", "required": "1", "example": "2", "desc": "var b"},
                        ],
-                       res_body_type="json",
-                       res_body=json.dumps({"code": 0, "message": "success", "data": {"result": "3"}}),
-                       res_body_is_json_schema=False,
-                       status='done')
+                       res_body={"code": 0, "message": "success", "data": {"result": "3"}})
 
 To create a POST interface in the project::
 
@@ -42,13 +39,6 @@ To create a POST interface in the project::
                        method='POST',
                        path='/sub',
                        req_headers=[{"name": "Content-Type", "value": "application/json"}],
-                       req_body_type="json",
-                       req_body_other=json.dumps({"a": "5", "b": "1"}),
-                       req_body_is_json_schema=False,
-
-                       res_body_type="json",
-                       res_body=json.dumps({"code": 0, "message": "success", "data": {"result": "4"}}),
-                       res_body_is_json_schema=False,
-                       status='done')
-
+                       req_body_other={"a": "5", "b": "1"},
+                       res_body={"code": 0, "message": "success", "data": {"result": "4"}})
 
