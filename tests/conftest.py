@@ -20,6 +20,6 @@ def yapi(base_url):
 
 
 @pytest.fixture(scope='session')
-def yapi_admin(yapi, admin):
+def yapi_login(yapi, admin):
     yapi.login(*admin)
     return yapi

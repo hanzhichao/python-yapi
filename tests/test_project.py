@@ -3,17 +3,17 @@ from pprint import pprint
 
 class TestProject:
 
-    def test_get_project_list(self, yapi_admin):
-        print(yapi_admin.get_project_list())
+    def test_get_project_list(self, yapi_login):
+        print(yapi_login.get_project_list())
 
-    def test_get_project(self, yapi_admin):
-        print(yapi_admin.get_project(project_id=55))
+    def test_get_project(self, yapi_login):
+        print(yapi_login.get_project(project_id=55))
 
-    def test_add_project(self, yapi_admin):
-        print(yapi_admin.add_project(name='测试项目3'))
+    def test_add_project(self, yapi_login):
+        print(yapi_login.add_project(name='测试项目3'))
 
-    def test_delete_project(self, yapi_admin):
-        data = yapi_admin.delete_project(project_id=56)
+    def test_delete_project(self, yapi_login):
+        data = yapi_login.delete_project(project_id=56)
         pprint(data)
         # print(yapi_admin.get_project(project_id=33))
 

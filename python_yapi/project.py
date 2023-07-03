@@ -90,7 +90,7 @@ class ProjectMixIn(ApiBase):
         }
         return self.get(url, params=params)
 
-    def get_project(self, project_id: int):
+    def get_project(self, project_id: int) -> dict:
         """
         Get a project.
         :param project_id:
@@ -134,6 +134,14 @@ class ProjectMixIn(ApiBase):
         url = 'api/project/get'
         params = {'id': project_id}
         return self.get(url, params=params)
+
+    def get_project_cat(self, project_id: int) -> list:
+        data = self.get_project(project_id)
+        return data['cat']
+
+    def get_project_default_category_id(self, project_id: int) -> int:
+        data = self.get_project_cat(project_id)
+        return data[0]['_id']
 
     def get_project_tag(self, project_id: int) -> List[dict]:
         return self.get_project(project_id)['tag']
