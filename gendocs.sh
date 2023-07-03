@@ -1,1 +1,3 @@
-cd docs && sphinx-apidoc  .. && make html && cd -
+
+
+cd docs && sphinx-apidoc -o . ../python_yapi && make html && cd - || exit
