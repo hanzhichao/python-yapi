@@ -4,14 +4,6 @@ python\_yapi package
 Submodules
 ----------
 
-python\_yapi.auth module
-------------------------
-
-.. automodule:: python_yapi.auth
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
 python\_yapi.base module
 ------------------------
 
@@ -36,10 +28,26 @@ python\_yapi.collection module
    :undoc-members:
    :show-inheritance:
 
+python\_yapi.constants module
+-----------------------------
+
+.. automodule:: python_yapi.constants
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 python\_yapi.exceptions module
 ------------------------------
 
 .. automodule:: python_yapi.exceptions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+python\_yapi.follow module
+--------------------------
+
+.. automodule:: python_yapi.follow
    :members:
    :undoc-members:
    :show-inheritance:
@@ -60,10 +68,34 @@ python\_yapi.interface module
    :undoc-members:
    :show-inheritance:
 
+python\_yapi.log module
+-----------------------
+
+.. automodule:: python_yapi.log
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+python\_yapi.models module
+--------------------------
+
+.. automodule:: python_yapi.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 python\_yapi.project module
 ---------------------------
 
 .. automodule:: python_yapi.project
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+python\_yapi.user module
+------------------------
+
+.. automodule:: python_yapi.user
    :members:
    :undoc-members:
    :show-inheritance:

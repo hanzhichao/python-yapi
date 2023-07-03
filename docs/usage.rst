@@ -2,11 +2,53 @@
 Usage
 =====
 
-To use python-yapi in a project::
+To use python-yapi, first you should login as a user::
 
+    import json
     from python_yapi import YApi
 
-    yapi = YApi('http://localhost:3000')
-    yapi.login('admin@admin.com', 'ylme.com'
+    yapi = YApi(base_url='http://localhost:3000')
+    email, password = 'kevin@126.com', 'abc123'
+    yapi.login(email, password)
 
-    yapi.create_project(name='Demo Project')
+To create a project in your YApi::
+
+    # Create a private project in user default group, with auto basepath, random color and random icon.
+    project = yapi.add_project('Demo Project')
+    project_id = project['_id']
+
+
+To create a GET interface in the project::
+
+    # Create a private "GET" interface in project default category with a sample json response.
+    yapi.add_interface(project_id=project_id,
+                       title='Calc Add',
+                       method='GET',
+                       path='/add',
+                       req_query=[
+                           {"name": "a", "required": "1", "example": "1", "desc": "var a"},
+                           {"name": "b", "required": "1", "example": "2", "desc": "var b"},
+                       ],
+                       res_body_type="json",
+                       res_body=json.dumps({"code": 0, "message": "success", "data": {"result": "3"}}),
+                       res_body_is_json_schema=False,
+                       status='done')
+
+To create a POST interface in the project::
+
+    # Create a private "POST" interface in project default category with a sample json data and a sample json response.
+    yapi.add_interface(project_id=project_id,
+                       title='Calc Sub',
+                       method='POST',
+                       path='/sub',
+                       req_headers=[{"name": "Content-Type", "value": "application/json"}],
+                       req_body_type="json",
+                       req_body_other=json.dumps({"a": "5", "b": "1"}),
+                       req_body_is_json_schema=False,
+
+                       res_body_type="json",
+                       res_body=json.dumps({"code": 0, "message": "success", "data": {"result": "4"}}),
+                       res_body_is_json_schema=False,
+                       status='done')
+
+
