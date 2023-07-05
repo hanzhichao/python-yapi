@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Han Zhichao
+# This file is distributed under the same license as the Python-YApi
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python-YApi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-05 19:26+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../../HISTORY.rst:3
+msgid "History"
+msgstr "发布历史"
+
+#: ../../HISTORY.rst:6
+msgid "0.1.0 (2023-06-28)"
+msgstr "0.1.0 (2023-06-28)"
+
+#: ../../HISTORY.rst:8
+msgid "First release on PyPI (not worked)."
+msgstr ""
+
+#: ../../HISTORY.rst:12
+msgid "0.1.1 (2023-06-28)"
+msgstr ""
+
+#: ../../HISTORY.rst:14
+msgid "Complete some api (still not worked)"
+msgstr ""
+
+#: ../../HISTORY.rst:17
+msgid "0.1.2 (2023-06-28)"
+msgstr ""
+
+#: ../../HISTORY.rst:19
+msgid "Fixed package name"
+msgstr ""
+

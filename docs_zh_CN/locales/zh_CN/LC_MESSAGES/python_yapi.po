@@ -1,0 +1,922 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Han Zhichao
+# This file is distributed under the same license as the Python-YApi
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python-YApi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-05 19:26+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../python_yapi.rst:2
+msgid "python\\_yapi package"
+msgstr ""
+
+#: ../python_yapi.rst:5
+msgid "Submodules"
+msgstr "子模块"
+
+#: ../python_yapi.rst:8
+msgid "python\\_yapi.base module"
+msgstr ""
+
+#: of python_yapi.base.ApiBase:1 python_yapi.cli.YApiCli:1
+#: python_yapi.log.LogMixIn:1 python_yapi.models.Category:1
+#: python_yapi.models.Env:1 python_yapi.models.Group:1
+#: python_yapi.models.Interfact:1 python_yapi.models.Project:1
+#: python_yapi.models.Tag:1 python_yapi.models.User:1
+#: python_yapi.models.Variable:1
+msgid "基类：:py:class:`object`"
+msgstr ""
+
+#: of python_yapi.base.ApiBase:1
+msgid "Base class for YApi Http API"
+msgstr ""
+
+#: of python_yapi.base.ApiBase.request:1
+msgid ""
+"Send general http request :param method: The HTTP method, eg: GET, POST, "
+"PUT, DELETE, ... :param url: The URL of the request, can be relative api "
+"path to the base_url :param kwargs: keyword arguments that "
+"requests.request() supports"
+msgstr ""
+
+#: of python_yapi.base.ApiBase.request:5
+msgid ""
+"eg: params, headers, data, json, files, auth, ... additional keyword "
+"argument: check_errcode (default as True)"
+msgstr ""
+
+#: of python_yapi.base.ApiBase.request
+#: python_yapi.collection.CollectionMixIn.clone_case_list
+#: python_yapi.collection.CollectionMixIn.update_collection_report
+#: python_yapi.group.GroupMixIn.add_group
+#: python_yapi.interface.InterfaceMixIn.update_interface
+#: python_yapi.project.ProjectMixIn.add_project_env_headers
+#: python_yapi.project.ProjectMixIn.update_project
+#: python_yapi.project.ProjectMixIn.update_project_env
+#: python_yapi.project.ProjectMixIn.update_project_tag
+#: python_yapi.user.UserMixIn.register
+msgid "返回"
+msgstr ""
+
+#: of python_yapi.base.ApiBase.request:7
+msgid "JSON format response body as dictionary"
+msgstr ""
+
+#: of python_yapi.base.ApiBase.request
+msgid "raise"
+msgstr ""
+
+#: of python_yapi.base.ApiBase.request:8
+msgid "TimeoutError if request timeout to get response"
+msgstr ""
+
+#: of python_yapi.base.ApiBase.request:9
+msgid "JSONDecodeError if response body is not a JSON"
+msgstr ""
+
+#: of python_yapi.base.ApiBase.request:10
+msgid ""
+"AssertionError if check_errcode(deafault as True) and errcode of response"
+" body not equals 0"
+msgstr ""
+
+#: ../python_yapi.rst:16
+msgid "python\\_yapi.cli module"
+msgstr ""
+
+#: of python_yapi.cli:1 python_yapi.cli.YApiCli.parse_args:1
+msgid "Console script for python_yapi."
+msgstr ""
+
+#: ../python_yapi.rst:24
+msgid "python\\_yapi.collection module"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn:1 python_yapi.follow.Follow:1
+#: python_yapi.group.GroupMixIn:1 python_yapi.interface.InterfaceMixIn:1
+#: python_yapi.project.ProjectMixIn:1 python_yapi.user.UserMixIn:1
+msgid "基类：:py:class:`~python_yapi.base.ApiBase`"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.add_case_list:1
+msgid ""
+"Import interfaces form a category to create a list of test cases. :param "
+"col_id: :param project_id: :param interface_list: :return: \"ok\""
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.add_collection:1
+msgid ""
+"Adds a collection. :param name: collection name :param desc: collection "
+"description :param project_id: project id :return:"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.build_test_report_item:1
+msgid ""
+"Build a test report item. :param caseId: :param method: :param url: "
+":param params: :param headers: :param status: :param timeout: :param "
+"res_body: :param msg: :param validRes: :param code: :param statusText: "
+":return:"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.clone_case_list:1
+msgid ""
+"Clone the case list of a collection. :param new_col_id: new collection id"
+" :param col_id: original collection id :param project_id: project id of "
+"original collection"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.del_collection:1
+msgid "Delete a collection. :param col_id: collection id :return:"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case:1
+msgid "Get a test case by id. :param case_id: test case id :return: eg: {"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case:4
+msgid ""
+"\"index\": 0, \"mock_verify\": false, \"enable_script\": false, \"_id\": "
+"10, \"uid\": 13, \"add_time\": 1688526154, \"up_time\": 1688526170, "
+"\"project_id\": 19, \"col_id\": 16, \"interface_id\": 17, \"casename\": "
+"\"示例接口1\", \"req_params\": [], \"req_headers\": [], \"req_query\": [], "
+"\"req_body_form\": [], \"__v\": 0, \"case_env\": \"local\", "
+"\"test_res_body\": null, \"test_res_header\": null, \"test_script\": "
+"\"\", \"path\": \"/demo/get01\", \"method\": \"GET\", \"res_body_type\": "
+"\"json\", \"interface_up_time\": 1688526091, \"req_body_is_json_schema\":"
+" false, \"res_body_is_json_schema\": false"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case:30
+#: python_yapi.collection.CollectionMixIn.get_case_list:25
+#: python_yapi.collection.CollectionMixIn.get_collection_list:24
+#: python_yapi.collection.CollectionMixIn.update_collection_report:41
+#: python_yapi.group.GroupMixIn.get_my_group:15
+#: python_yapi.group.GroupMixIn.get_my_group:16
+#: python_yapi.project.ProjectMixIn.get_project_wiki:19
+msgid "}"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case_env_list:1
+msgid ""
+"Get the test case environment list of a colletion. :param col_id: "
+"collection id. :return:"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case_list:1
+msgid "Get a list of cases. :param col_id: test collection id :return:"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case_list:23
+#: python_yapi.collection.CollectionMixIn.update_collection_report:41
+#: python_yapi.group.GroupMixIn.get_my_group:14
+msgid "eg: {"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case_list:7
+msgid "\"checkResponseField\": {"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case_list:6
+msgid "\"name\": \"code\", \"value\": \"0\", \"enable\": false"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case_list:9
+msgid "}, \"checkScript\": {"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case_list:11
+#: python_yapi.group.GroupMixIn.get_my_group:8
+msgid "\"enable\": false"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_case_list:12
+msgid ""
+"}, \"index\": 0, \"test_report\": \"{}\", \"checkHttpCodeIs200\": false, "
+"\"checkResponseSchema\": false, \"_id\": 26, \"name\": \"集合1 copy\", "
+"\"project_id\": 19, \"desc\": \"集合1描述\", \"uid\": 13, \"add_time\": "
+"1688525231, \"up_time\": 1688525231, \"__v\": 0"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_collection_list:1
+msgid "Get a list of collections. :param project_id: :return:"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_collection_list:24
+msgid "eg: ["
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_collection_list:12
+msgid "{"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_collection_list:6
+msgid ""
+"\"index\": 0, \"_id\": 16, \"name\": \"公共测试集\", \"project_id\": 19, "
+"\"desc\": \"公共测试集\", \"uid\": 13, \"add_time\": 1688525212, \"caseList\":"
+" []"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_collection_list:14
+msgid "}, {"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_collection_list:16
+msgid ""
+"\"index\": 0, \"_id\": 21, \"name\": \"集合1\", \"project_id\": 19, "
+"\"desc\": \"集合1描述\", \"uid\": 13, \"add_time\": 1688525227, \"caseList\":"
+" []"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.get_collection_list:25
+msgid "]"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_case:1
+msgid "Update a case. :return: eg: {n: 1, nModified: 1, ok: 1}"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection:1
+msgid "Update a collection. :param col_id: :param name: :param desc: :return:"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection:6
+msgid "eg: {\"n\":1,\"nModified\":1,\"ok\":1}"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:1
+msgid "Update a collection report. :param col_id: :param test_report:"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:21
+msgid "'10': {'caseId': 10,"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:6
+msgid ""
+"'code': 400, 'headers': {}, 'method': 'GET', 'msg': '数据异常', 'params': {},"
+" 'res_body': '请求异常，请检查 chrome network 错误信息... '"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:12
+#: python_yapi.collection.CollectionMixIn.update_collection_report:16
+#: python_yapi.collection.CollectionMixIn.update_collection_report:30
+#: python_yapi.collection.CollectionMixIn.update_collection_report:34
+msgid "'https://juejin.im/post/5c888a3e5188257dee0322af ' '通过该链接查看教程\"）',"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:14
+#: python_yapi.collection.CollectionMixIn.update_collection_report:32
+msgid "'status': 0, 'statusText': '请求异常，请检查 chrome network 错误信息... '"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:18
+msgid ""
+"'timeout': 82400000, 'url': 'http://127.0.0.1/demo/get01', 'validRes': "
+"[{'message': '请求异常，请检查 chrome network 错误信息... '"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:21
+msgid "'https://juejin.im/post/5c888a3e5188257dee0322af ' '通过该链接查看教程\"）'}]},"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:39
+msgid "'17': {'caseId': 17,"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:24
+msgid ""
+"'code': 400, 'headers': {}, 'method': 'POST', 'msg': '数据异常', 'params': "
+"{}, 'res_body': '请求异常，请检查 chrome network 错误信息... '"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:36
+msgid ""
+"'timeout': 82400000, 'url': 'http://127.0.0.1/demo/post01', 'validRes': "
+"[{'message': '请求异常，请检查 chrome network 错误信息... '"
+msgstr ""
+
+#: of python_yapi.collection.CollectionMixIn.update_collection_report:39
+msgid "'https://juejin.im/post/5c888a3e5188257dee0322af ' '通过该链接查看教程\"）'}]}"
+msgstr ""
+
+#: ../python_yapi.rst:32
+msgid "python\\_yapi.constants module"
+msgstr ""
+
+#: of python_yapi.constants.ProjectColor:1
+#: python_yapi.interface.InterfaceStatus:1 python_yapi.models.HttpMethod:1
+#: python_yapi.project.ProjectType:1 python_yapi.project.Role:1
+msgid "基类：:py:class:`~enum.Enum`"
+msgstr ""
+
+#: of python_yapi.constants.ProjectColor:1
+#: python_yapi.interface.InterfaceStatus:1 python_yapi.models.HttpMethod:1
+#: python_yapi.project.ProjectType:1 python_yapi.project.Role:1
+msgid "An enumeration."
+msgstr ""
+
+#: ../python_yapi.rst:40
+msgid "python\\_yapi.exceptions module"
+msgstr ""
+
+#: of python_yapi.exceptions.EnvNotFound:1
+#: python_yapi.exceptions.ProjectNameExists:1
+#: python_yapi.exceptions.ResponseNotJSONError:1
+#: python_yapi.exceptions.ServerError:1
+msgid "基类：:py:class:`Exception`"
+msgstr ""
+
+#: of python_yapi.exceptions.ServerError:1
+msgid "服务器出错{'errcode': 40011, 'errmsg': '服务器出错...', 'data': None}"
+msgstr ""
+
+#: ../python_yapi.rst:48
+msgid "python\\_yapi.follow module"
+msgstr ""
+
+#: ../python_yapi.rst:56
+msgid "python\\_yapi.group module"
+msgstr ""
+
+#: of python_yapi.group.GroupMixIn.add_group:1
+msgid "Adds a new group"
+msgstr ""
+
+#: of python_yapi.group.GroupMixIn.add_group
+#: python_yapi.interface.InterfaceMixIn.update_interface
+#: python_yapi.project.ProjectMixIn.update_project
+#: python_yapi.user.UserMixIn.register
+msgid "参数"
+msgstr ""
+
+#: of python_yapi.group.GroupMixIn.add_group:3
+msgid "Group name"
+msgstr ""
+
+#: of python_yapi.group.GroupMixIn.add_group:4
+msgid "Group description"
+msgstr ""
+
+#: of python_yapi.group.GroupMixIn.add_group:5
+msgid "Group owner IDs"
+msgstr ""
+
+#: of python_yapi.group.GroupMixIn.get_my_group:1
+msgid "Get my default group :return:"
+msgstr ""
+
+#: of python_yapi.group.GroupMixIn.get_my_group:4
+msgid "\"errcode\": 0, \"errmsg\": \"成功！\", \"data\": {"
+msgstr ""
+
+#: of python_yapi.group.GroupMixIn.get_my_group:7
+msgid "\"custom_field1\": {"
+msgstr ""
+
+#: of python_yapi.group.GroupMixIn.get_my_group:9
+msgid ""
+"}, \"type\": \"private\", \"_id\": 11, \"group_name\": \"User-11\", "
+"\"add_time\": 1686400822, \"up_time\": 1686400822"
+msgstr ""
+
+#: ../python_yapi.rst:64
+msgid "python\\_yapi.interface module"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.add_interface:1
+msgid ""
+"Adds a new interface. :param status: :param api_opened: :param "
+"switch_notice: :param res_body: :param res_body_is_json_schema: :param "
+"req_body_other: :param req_body_type: :param req_body_form: :param "
+"req_headers: :param req_query: :param req_params: :param markdown: :param"
+" req_body_is_json_schema: :param desc: :param tag: :param title: "
+"interface title :param method: http method :param path: interface path "
+":param project_id: project id :param catid: category id :return:"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.add_interface:45
+#: python_yapi.interface.InterfaceMixIn.get_interface:8
+#: python_yapi.project.ProjectMixIn.add_project:29
+msgid "eg: {'__v': 0,"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.add_interface:24
+msgid ""
+"'_id': 37, 'add_time': 1688352373, 'api_opened': False, 'catid': 153, "
+"'edit_uid': 0, 'index': 0, 'method': 'GET', 'path': '/demo_get01', "
+"'project_id': 62, 'query_path': {'params': [], 'path': '/demo_get01'}, "
+"'req_body_form': [], 'req_body_is_json_schema': False, 'req_headers': [],"
+" 'req_params': [], 'req_query': [], 'res_body_is_json_schema': False, "
+"'res_body_type': 'json', 'status': 'undone', 'tag': [], 'title': "
+"'GET示例接口', 'type': 'static', 'uid': 16, 'up_time': 1688352373}"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:1
+msgid "Get interface details. :param interface_id: Interface id :return:"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:5
+msgid ""
+"'_id': 37, 'add_time': 1688352373, 'api_opened': False, 'catid': 153, "
+"'desc': '<p>一个通过姓名年级获取学生信息的接口</p>"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:43
+msgid "',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:11
+msgid ""
+"'edit_uid': 0, 'index': 0, 'markdown': '一个通过姓名年级获取学生信息的接口', 'method': "
+"'GET', 'path': '/demo_get01', 'project_id': 62, 'query_path': {'params': "
+"[], 'path': '/demo_get01'}, 'req_body_form': [], "
+"'req_body_is_json_schema': True, 'req_headers': [], 'req_params': [], "
+"'req_query': [{'_id': '64a23853a534ee9cf4b713a1',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:23
+msgid "'desc': '姓名', 'example': 'Kevin', 'name': 'name', 'required': '1'},"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:30
+msgid "{'_id': '64a23853a534ee9cf4b713a0',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:28
+msgid "'desc': '年级', 'example': '3', 'name': 'class', 'required': '0'}],"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:34
+msgid "'res_body': '{\"type\":\"object\",\"title\":\"empty '"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:33
+msgid ""
+"'object\",\"properties\":{\"code\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer\"},\"description\":\"错误码\"},\"data\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\",\"mock\":{\"mock\":\"@name\"},\"description\":\"姓名\"},\"gender\":{\"type\":\"string\",\"mock\":{\"mock\":\"@boolean\"},\"description\":\"性别"
+" ' 'true男 ' "
+"'false女\"},\"age\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer\"},\"description\":\"年龄\"},\"grade\":{\"type\":\"number\",\"mock\":{\"mock\":\"@integer\"},\"description\":\"年级\"}},\"required\":[\"name\",\"gender\",\"age\",\"grade\"]},\"description\":\"数据\"}},\"required\":[\"code\",\"data\"]}',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.get_interface:36
+msgid ""
+"'res_body_is_json_schema': True, 'res_body_type': 'json', 'status': "
+"'done', 'tag': ['tag1', 'tag2'], 'title': 'GET示例接口', 'type': 'static', "
+"'uid': 16, 'up_time': 1688352851, 'username': 'Kevin'}"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:1
+msgid ""
+"Update interface details. :param req_body_other: :param req_body_type: "
+":param interface_id: :param status: :param title: :param catid: :param "
+"method: :param path: :param tag: :param desc: :param markdown: :param "
+"req_body_is_json_schema: :param req_params: :param req_query: :param "
+"req_headers: :param req_body_form: :param res_body_is_json_schema: :param"
+" res_body_type: :param res_body:"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:41
+msgid "eg: eg: {'properties': {'code': {'description': '错误码',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:22
+#: python_yapi.interface.InterfaceMixIn.update_interface:26
+#: python_yapi.interface.InterfaceMixIn.update_interface:32
+msgid "'mock': {'mock': '@integer'}, 'type': 'number'},"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:38
+msgid "'data': {'description': '数据',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:37
+msgid "'items': {'properties': {'age': {'description': '年龄',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:29
+msgid "'gender': {'description': '性别 true男 false女',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:29
+msgid "'mock': {'mock': '@boolean'}, 'type': 'string'},"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:32
+msgid "'grade': {'description': '年级',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:35
+msgid "'name': {'description': '姓名',"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:35
+msgid "'mock': {'mock': '@name'}, 'type': 'string'}},"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:37
+msgid "'required': ['name', 'gender', 'age', 'grade'], 'type': 'object'},"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:39
+msgid "'type': 'array'}},"
+msgstr ""
+
+#: of python_yapi.interface.InterfaceMixIn.update_interface:40
+msgid "'required': ['code', 'data'], 'title': 'empty object', 'type': 'object'}"
+msgstr ""
+
+#: ../python_yapi.rst:72
+msgid "python\\_yapi.log module"
+msgstr ""
+
+#: ../python_yapi.rst:80
+msgid "python\\_yapi.models module"
+msgstr ""
+
+#: ../python_yapi.rst:88
+msgid "python\\_yapi.project module"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.add_project:1
+msgid ""
+"Add a project in YApi :param name: project name :param basepath: project "
+"base path :param group_id: project group id :param icon: project icon, "
+"one of PROJECT_ICONS (default as random icon) :param color: project "
+"color, one of PROJECT_COLORS (default as random color) :param "
+"project_type: project type (default as private) :return: data of JSON "
+"response body  # todo 已存在的项目名"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.add_project:10
+msgid ""
+"'_id': 41, 'add_time': 1687941306, 'basepath': '', 'color': 'blue', "
+"'env': [{'_id': '649bf0ba5ffe870635b0a16c',"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.add_project:15
+#: python_yapi.project.ProjectMixIn.get_project:18
+msgid ""
+"'domain': 'http://127.0.0.1', 'global': [], 'header': [], 'name': "
+"'local'}],"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.add_project:19
+msgid ""
+"'group_id': 11, 'icon': 'code-o', 'is_json5': False, 'is_mock_open': "
+"False, 'members': [], 'name': '测试项目3', 'project_type': 'private', "
+"'strice': False, 'switch_notice': True, 'tag': [], 'uid': 11, 'up_time': "
+"1687941306}"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.add_project_env_headers:1
+msgid ""
+"Add headers in project environment configuration. :param project_id: "
+"project id :param headers:"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.add_project_env_headers:4
+msgid "eg: [{'name': 'test', 'value': 'abc'}]"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.add_project_tag:1
+msgid ""
+"Add project tag list. :param project_id: project id :param tag: tag list "
+":return:"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.add_project_tag:5
+#: python_yapi.project.ProjectMixIn.update_project_tag:5
+msgid "eg: {'n': 1, 'nModified': 1, 'ok': 1}"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.delete_project:1
+msgid ""
+"Delete a project :param project_id:  id :return: data of JSON response "
+"body"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.delete_project:4
+msgid "eg:  {'deletedCount': 1, 'n': 1, 'ok': 1}"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:1
+msgid "Get a project. :param project_id: :return:"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:37
+msgid "eg: {'_id': 55,"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:5
+msgid "'add_time': 1688125162, 'basepath': '/leslie-medina', 'cat': [{'__v': 0,"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:8
+msgid ""
+"'_id': 95, 'add_time': 1688125162, 'desc': '公共分类', 'index': 0, 'name': "
+"'公共分类', 'project_id': 55, 'uid': 15, 'up_time': 1688125162}],"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:16
+msgid "'color': 'yellow', 'env': [{'_id': '649ebeea5ffe870635b0a18a',"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:22
+msgid ""
+"'group_id': 35, 'icon': 'environment-o', 'is_json5': False, "
+"'is_mock_open': False, 'name': 'Leslie Medina', 'project_type': "
+"'private', 'role': 'admin', 'strice': False, 'switch_notice': True, "
+"'tag': [{'_id': '649ec25a5ffe870635b0a194',"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:32
+msgid "'desc': 'tag1 desc', 'name': 'tag1'},"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:35
+msgid "{'_id': '649ec25a5ffe870635b0a193',"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:35
+msgid "'desc': 'tag2 desc', 'name': 'tag2'}],"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project:37
+msgid "'uid': 15, 'up_time': 1688126042}"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_env:1
+msgid ""
+"Get project environment configurations :param project_id: project id "
+":return: data of JSON response body"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_env:7
+msgid "eg: [{'_id': '649ebeea5ffe870635b0a18a',"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_env:5
+msgid ""
+"'domain': 'http://127.0.0.1', 'global': [], 'header': [], 'name': "
+"'local'}]}"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_list:1
+msgid ""
+"Get project list of a given group. :param group_id: group id :param page:"
+" page number (default as 1 :param limit: limit number (default as 10) "
+":return:"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_token:1
+msgid "Get project token. :param project_id: project id :return: token"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_token:4
+msgid "eg: 51ac2fb9044ea64768ba8f8ba7fcf11b5d5d58733d40458756f58a704f9132b0"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_wiki:1
+msgid "Get project wiki content. :param project_id: :param desc: html description"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_wiki:4
+#: python_yapi.project.ProjectMixIn.update_project_wiki:4
+msgid "eg: \"<p>nihao ya</p>"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_wiki:18
+#: python_yapi.project.ProjectMixIn.update_project_wiki:8
+msgid "\""
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_wiki
+#: python_yapi.project.ProjectMixIn.update_project_wiki
+msgid "param markdown"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_wiki:6
+#: python_yapi.project.ProjectMixIn.update_project_wiki:6
+msgid "markdown description eg: \"nihao ya\""
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_wiki
+#: python_yapi.project.ProjectMixIn.update_project_wiki
+msgid "return"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_wiki:8
+msgid "data or JSON responsebody eg: {\"edit_uid\": 15,"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.get_project_wiki:10
+msgid ""
+"\"_id\": 11, \"project_id\": 55, \"desc\": \"<p>nihao ya****</p>\", "
+"\"markdown\": \"nihao ya\\*\\*\\*\\*\", \"username\": \"zhangsan\", "
+"\"uid\": 15, \"add_time\": 1688129575, \"up_time\": 1688129736, \"__v\": "
+"0"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.search_project:1
+msgid "Search project by keyword :param keyword: :return:"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project:1
+msgid ""
+"Update a project. :param project_id: project id :param name: project name"
+" :param basepath: :param group_id: :param project_type: :param "
+"switch_notice: :param strice: :param is_json5: :param env: project "
+"environment configurations"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project:14
+msgid "eg: [{'header': [{'name': 'test', 'value': 'abc'}],"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project:12
+msgid ""
+"'global': [{'_id': '6484a903e6b807c906d16a5a', 'name': 'ggg', 'value': "
+"'aaa'}], '_id': '6484a903e6b807c906d16a59', 'name': '环境1', 'domain': "
+"'http://127.0.0.2'},"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project:14
+msgid ""
+"{'header': [], 'global': [], '_id': '64847303e6b807c906d16a52', 'name': "
+"'local',"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project:15
+msgid "'domain': 'http://127.0.0.1'}],"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project:16
+msgid ""
+"project tags eg: [{'name': 'tag1', 'desc': 'tag1描述'}, {'name': 'tag2', "
+"'desc': ''}]"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project:18
+msgid "data of JSON response body"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project_env:1
+msgid ""
+"Update project environment configuration :param project_id: project id "
+":param env: list of environment configurations"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project_env:6
+msgid "eg: [{'name': '环境1',"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project_env:5
+msgid ""
+"'domain': 'http://127.0.0.2', 'header': [{'name': 'test', 'value': "
+"'abc'}], 'global': [{'name': 'ggg', 'value': 'aaa'}]}]"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project_env:8
+msgid "data of JSON response body eg: {\"n\":1,\"nModified\":1,\"ok\":1}}"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project_tag:1
+msgid "Update project tag list. :param project_id: project id :param tag:"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project_tag:4
+msgid ""
+"eg: [{'desc': 'tag1 desc', 'name': 'tag1'}, {'desc': 'tag2 desc', 'name':"
+" 'tag2'}]"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project_wiki:1
+msgid "Edit project wiki :param project_id: :param desc: html description"
+msgstr ""
+
+#: of python_yapi.project.ProjectMixIn.update_project_wiki:8
+msgid "data or JSON responsebody eg: {\"n\":1,\"nModified\":1,\"ok\":1}"
+msgstr ""
+
+#: of python_yapi.project.ProjectTag:1
+msgid "基类：:py:class:`tuple`"
+msgstr ""
+
+#: ../docstring of python_yapi.project.ProjectTag.desc:1
+msgid "Alias for field number 1"
+msgstr ""
+
+#: ../docstring of python_yapi.project.ProjectTag.name:1
+msgid "Alias for field number 0"
+msgstr ""
+
+#: ../python_yapi.rst:96
+msgid "python\\_yapi.user module"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.change_password:1
+msgid ""
+"Change password. :param uid: user id :param old_password: user original "
+"password :param password: user new password :return:"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.find_user:1
+msgid "Find a user by uid. :param uid: user id :return: user data"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.find_user:9
+msgid "eg: {\"uid\": 13,"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.find_user:5
+msgid ""
+"\"username\": \"superhin\", \"email\": \"superhin@126.com\", \"role\": "
+"\"member\", \"type\": \"site\", \"add_time\": 1687943141, \"up_time\": "
+"1687943146}"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.get_user_status:1
+msgid "Get user status. :return:"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.get_user_status:9
+msgid "eg:{ \"_id\": 15,"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.get_user_status:4
+msgid ""
+"\"username\": \"zhangsan\", \"email\": \"zhangsan@126.com\", \"up_time\":"
+" 1688116008, \"add_time\": 1688116008, \"role\": \"member\", \"type\": "
+"\"site\", \"study\": false}"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.login:1
+msgid ""
+"Login YApi :param email: user email :param password: user password "
+":return: JSON response body as dictionary"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.login:11
+#: python_yapi.user.UserMixIn.register:11
+msgid "eg: {'add_time': 1688116008,"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.login:6 python_yapi.user.UserMixIn.register:6
+msgid ""
+"'email': 'zhangsan@126.com', 'role': 'member', 'study': False, 'type': "
+"'site', 'uid': 15, 'up_time': 1688116008, 'username': 'zhangsan'}"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.register:4
+msgid ""
+"eg: {'add_time': 1688116008,      'email': 'zhangsan@126.com',      "
+"'role': 'member',      'study': False,      'type': 'site',      'uid': "
+"15,      'up_time': 1688116008,      'username': 'zhangsan'}"
+msgstr ""
+
+#: of python_yapi.user.UserMixIn.update_user:1
+msgid ""
+"Update user info :param uid: user id :param username: username :param "
+"email: user email :return:"
+msgstr ""
+
+#: ../python_yapi.rst:104
+msgid "python\\_yapi.utils module"
+msgstr ""
+
+#: of python_yapi.utils.log:1
+msgid ""
+"Decorator for logging :param func: :param verbosity: verbosity "
+"level(default as 1) :return: decorator or function"
+msgstr ""
+
+#: ../python_yapi.rst:112
+msgid "python\\_yapi.yapi module"
+msgstr ""
+
+#: of python_yapi.yapi.YApi:1
+msgid ""
+"基类：:py:class:`~python_yapi.user.UserMixIn`, "
+":py:class:`~python_yapi.group.GroupMixIn`, "
+":py:class:`~python_yapi.project.ProjectMixIn`, "
+":py:class:`~python_yapi.collection.CollectionMixIn`, "
+":py:class:`~python_yapi.interface.InterfaceMixIn`"
+msgstr ""
+
+#: ../python_yapi.rst:120
+msgid "Module contents"
+msgstr ""
+

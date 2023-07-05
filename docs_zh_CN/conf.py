@@ -49,4 +49,4 @@ pygments_style = 'sphinx'
 source_suffix = ['.rst', '.md']
 master_doc = 'index'
 html_static_path = ['_static']
-language = 'en' # ['en', 'zh_CN']  #
+language = 'zh_CN' # ['en', 'zh_CN']  #

@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Han Zhichao
+# This file is distributed under the same license as the Python-YApi
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python-YApi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-05 19:26+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../tests.rst:2
+msgid "tests package"
+msgstr "测试包"
+
+#: ../tests.rst:5
+msgid "Submodules"
+msgstr ""
+
+#: ../tests.rst:8
+msgid "tests.conftest module"
+msgstr ""
+
+#: ../tests.rst:16
+msgid "tests.test\\_base\\_api module"
+msgstr ""
+
+#: ../tests.rst:24
+msgid "tests.test\\_group module"
+msgstr ""
+
+#: of tests.test_group.TestGroup:1 tests.test_interface.TestInterface:1
+#: tests.test_project.TestProject:1 tests.test_user.TestLogin:1
+msgid "基类：:py:class:`object`"
+msgstr ""
+
+#: ../tests.rst:32
+msgid "tests.test\\_interface module"
+msgstr ""
+
+#: ../tests.rst:40
+msgid "tests.test\\_project module"
+msgstr ""
+
+#: ../tests.rst:48
+msgid "tests.test\\_user module"
+msgstr ""
+
+#: ../tests.rst:56
+msgid "Module contents"
+msgstr ""
+

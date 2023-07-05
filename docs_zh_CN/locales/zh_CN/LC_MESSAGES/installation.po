@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Han Zhichao
+# This file is distributed under the same license as the Python-YApi
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python-YApi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-05 19:26+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../installation.rst:5
+msgid "Installation"
+msgstr "安装方法"
+
+#: ../installation.rst:9
+msgid "Stable release"
+msgstr "稳定版本"
+
+#: ../installation.rst:11
+msgid "To install python-yapi, run this command in your terminal:"
+msgstr ""
+
+#: ../installation.rst:17
+msgid ""
+"This is the preferred method to install python-yapi, as it will always "
+"install the most recent stable release."
+msgstr ""
+
+#: ../installation.rst:19
+msgid ""
+"If you don't have `pip`_ installed, this `Python installation guide`_ can"
+" guide you through the process."
+msgstr ""
+
+#: ../installation.rst:27
+msgid "From sources"
+msgstr "从源码构建"
+
+#: ../installation.rst:29
+msgid "The sources for python-yapi can be downloaded from the `Github repo`_."
+msgstr ""
+
+#: ../installation.rst:31
+msgid "You can either clone the public repository:"
+msgstr ""
+
+#: ../installation.rst:37
+msgid "Or download the `tarball`_:"
+msgstr ""
+
+#: ../installation.rst:43
+msgid "Once you have a copy of the source, you can install it with:"
+msgstr ""
+

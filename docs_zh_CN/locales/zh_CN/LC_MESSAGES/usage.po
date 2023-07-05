@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, Han Zhichao
+# This file is distributed under the same license as the Python-YApi
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Python-YApi \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-07-05 19:26+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_CN\n"
+"Language-Team: zh_CN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: ../usage.rst:3
+msgid "Usage"
+msgstr "使用方法"
+
+#: ../usage.rst:5
+msgid "To use python-yapi, first you should login as a user::"
+msgstr "使用python-yapi，首先你需要登录。"
+
+#: ../usage.rst:14
+msgid "To create a project in your YApi::"
+msgstr "在你的YApi上创建一个项目::"
+
+#: ../usage.rst:21
+msgid "To create a GET interface in the project::"
+msgstr "在你的项目中创建一个GET接口::"
+
+#: ../usage.rst:34
+msgid "To create a POST interface in the project::"
+msgstr "在你的项目中创建一个POST接口::"
+

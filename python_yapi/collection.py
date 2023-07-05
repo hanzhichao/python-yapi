@@ -5,13 +5,20 @@ from python_yapi.base import ApiBase
 
 class CollectionMixIn(ApiBase):
     def add_collection(self, name: str, desc: str, project_id: int):
+        """
+        Adds a collection.
+        :param name: collection name
+        :param desc: collection description
+        :param project_id: project id
+        :return:
+        """
         url = '/api/col/add_col'
         payload = {"name": name, "desc": desc, "project_id": str(project_id)}
         return self.post(url, json=payload)
 
     def get_collection_list(self, project_id: int) -> list:
         """
-
+        Get a list of collections.
         :param project_id:
         :return:
             eg: [
@@ -74,23 +81,41 @@ class CollectionMixIn(ApiBase):
         return self.request('GET', url, params=params)['colData']
 
     def get_case_env_list(self, col_id: int):
+        """
+        Get the test case environment list of a colletion.
+        :param col_id: collection id.
+        :return:
+        """
         url = '/api/col/case_env_list'
         params = {'col_id': col_id}
         return self.get(url, params=params)
 
     def del_collection(self, col_id: int):
+        """
+        Delete a collection.
+        :param col_id: collection id
+        :return:
+        """
         url = '/api/col/del_col'
         params = {'col_id': col_id}
         return self.get(url, params=params)
 
     def clone_case_list(self, new_col_id: int, col_id: int, project_id: int):
+        """
+        Clone the case list of a collection.
+        :param new_col_id: new collection id
+        :param col_id: original collection id
+        :param project_id: project id of original collection
+
+        :return:
+        """
         url = '/api/col/clone_case_list'
         payload = {"new_col_id": new_col_id, "col_id": col_id, "project_id": project_id}
         return self.post(url, json=payload)
 
     def update_collection(self, col_id: int, name: str, desc: str):
         """
-
+        Update a collection.
         :param col_id:
         :param name:
         :param desc:
@@ -103,7 +128,7 @@ class CollectionMixIn(ApiBase):
 
     def add_case_list(self, col_id: int, project_id: int, interface_list: list) -> str:
         """
-
+        Import interfaces form a category to create a list of test cases.
         :param col_id:
         :param project_id:
         :param interface_list:
@@ -118,7 +143,7 @@ class CollectionMixIn(ApiBase):
                     req_body_form: list, test_script: str = "", enable_script: bool = False, test_res_body: str = None,
                     test_res_header: str = None):
         """
-
+        Update a case.
         :return: eg: {n: 1, nModified: 1, ok: 1}
         """
         url = 'api/col/up_case'
@@ -132,8 +157,8 @@ class CollectionMixIn(ApiBase):
 
     def get_case(self, case_id: int):
         """
-
-        :param case_id:
+        Get a test case by id.
+        :param case_id: test case id
         :return: eg: {
                         "index": 0,
                         "mock_verify": false,
@@ -184,6 +209,22 @@ class CollectionMixIn(ApiBase):
                                timeout: int = 82400000,
                                res_body: str = '', msg: str = '', validRes: list = [], code: int = None,
                                statusText: str = '') -> dict:
+        """
+        Build a test report item.
+        :param caseId:
+        :param method:
+        :param url:
+        :param params:
+        :param headers:
+        :param status:
+        :param timeout:
+        :param res_body:
+        :param msg:
+        :param validRes:
+        :param code:
+        :param statusText:
+        :return:
+        """
         return {
             str(caseId): {
                 'caseId': str(caseId),
@@ -203,7 +244,7 @@ class CollectionMixIn(ApiBase):
 
     def update_collection_report(self, col_id, test_report: dict):
         """
-
+        Update a collection report.
         :param col_id:
         :param test_report:
             eg: {
