@@ -15,7 +15,7 @@ pip install python-yapi
 
 ## Simple Use
 > Document: <https://python-yapi.readthedocs.io/en/latest/index.html>
-
+> 中文文档: <https://python-yapi.readthedocs.io/zh_CN/latest/>
 
 ### Register and Login
 ```python
