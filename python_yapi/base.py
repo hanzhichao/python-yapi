@@ -47,7 +47,7 @@ class ApiBase(object):
         check_errcode = kwargs.pop('check_errcode', True)
         if check_errcode:
             assert response_body['errcode'] == 0, f'response error: {response_body}'
-        return response_body['data']
+        return response_body
 
     @log
     def get(self, url, **kwargs) -> Union[dict, list, str]:
@@ -62,7 +62,7 @@ class ApiBase(object):
         :raise: AssertionError if check_errcode(deafault as True) and errcode of response body not equals 0
         :return: JSON format response body as dictionary
         """
-        return self.request('GET', url, **kwargs)
+        return self.request('GET', url, **kwargs)['data']
 
     @log
     def post(self, url, **kwargs) -> Union[dict, list, str]:
@@ -77,4 +77,4 @@ class ApiBase(object):
         :raise: AssertionError if check_errcode(deafault as True) and errcode of response body not equals 0
         :return: JSON format response body as dictionary
         """
-        return self.request('POST', url, **kwargs)
+        return self.request('POST', url, **kwargs)['data']

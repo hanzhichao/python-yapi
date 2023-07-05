@@ -35,6 +35,12 @@ setup(
     long_description_content_type="text/markdown",
     url='https://github.com/hanzhichao/python-yapi',
 
+    entry_points={
+        'console_scripts': [
+            'yapi = python_yapi.cli:main',
+        ]
+    },
+
     include_package_data=True,
     packages=find_packages(include=['python_yapi']),
     zip_safe=True,
